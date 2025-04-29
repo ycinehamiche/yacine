@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>رفع ملف</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>رفع ملف جديد</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.filename.label }}<br>
+        {{ form.filename(size=40) }}<br><br>
+        {{ form.submit(class_="btn btn-primary") }}
+    </form>
+</body>
+</html>
